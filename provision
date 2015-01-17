@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+echo "Installing Ruby Gems"
+
+  gem install sinatra
+  apt-get -y install ruby-full
+  gem install bundler
+  cd /vagrant
+  bundle install
+
+echo "Running Ruby Apps"
+
+  nohup ruby /vagrant/register-stub/run.rb >> log.txt 2>&1 &

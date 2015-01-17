@@ -1,0 +1,2 @@
+ruby: no Ruby script found in input (LoadError)
+ruby: no Ruby script found in input (LoadError)
