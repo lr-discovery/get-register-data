@@ -4,8 +4,8 @@
 #function that reads a formatted json file in and returns as pure json response
 def getjson(filename)
   #checks if file exists and goes to failed page if it doesn't
-  if File.file?("../files/"+filename)
-    json = File.read("../files/"+filename)
+  if File.file?("/vagrant/files/"+filename)
+    json = File.read("/vagrant/files/"+filename)
     obj = JSON.parse(json)
     return obj.to_json
     else
